@@ -1,0 +1,13 @@
+version: '1.0' #version number
+
+services:
+  img:
+    myapp: email-submit:01
+    container_name: myapp
+    ports:
+      - 8081:3030
+    volume:
+      -"D:\PracticeGit\Php-Addiciton\phpCode\send-email\emails.txt"
+    environment:
+      -PORT=3030
+    restart: unless-started
